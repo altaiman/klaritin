@@ -1268,6 +1268,18 @@ body {
   background: url('../img/general/top-bg.jpg') no-repeat top;
   background-size: cover;
 }
+.page__top::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: url('../img/general/clouds.png') no-repeat bottom;
+  background-position: 0 400px;
+  -webkit-animation: float 12s infinite ease-in-out;
+          animation: float 12s infinite ease-in-out;
+}
 .page__bottom {
   background: url('../img/general/bottom-bg.jpg') no-repeat center;
   background-size: cover;
@@ -1452,6 +1464,34 @@ button:focus {
 @media (max-height: 630px) {
   .page__content {
     height: 560px;
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-50px);
+            transform: translatey(-50px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-50px);
+            transform: translatey(-50px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
 }
 .count {
